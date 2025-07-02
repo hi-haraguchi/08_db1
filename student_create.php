@@ -17,7 +17,9 @@ if (
   !isset($_POST['faculty']) || $_POST['faculty'] === '' ||  
   !isset($_POST['faculty2']) || $_POST['faculty2'] === '' ||
   !isset($_POST['department']) || $_POST['department'] === ''||
-  !isset($_POST['department2']) || $_POST['department2'] === ''||  
+  !isset($_POST['department2']) || $_POST['department2'] === ''||
+  !isset($_POST['univkind']) || $_POST['univkind'] === '' ||
+  !isset($_POST['academicfield']) || $_POST['academicfield'] === '' ||      
   !isset($_POST['examsystem']) || $_POST['examsystem'] === '' ||
   !isset($_POST['commontest']) || $_POST['commontest'] === '' ||
   !isset($_POST['oneormulti']) || $_POST['oneormulti'] === ''||
@@ -35,6 +37,8 @@ $faculty = $_POST['faculty'];
 $faculty2 = $_POST['faculty2'];
 $department = $_POST['department'];
 $department2 = $_POST['department2'];
+$univkind = $_POST['univkind'];
+$academicfield = $_POST['academicfield'];
 $examsystem = $_POST['examsystem'];
 $commontest = $_POST['commontest'];
 $oneormulti = $_POST['oneormulti'];
@@ -63,8 +67,8 @@ try {
 
 
 // SQL作成&実行
-$sql = 'INSERT INTO exam_table (id, classnumber, attendancenumber, id1000, name, nameuniv, faculty, faculty2, department, department2, examsystem, commontest, oneormulti, passfail, created_at) 
-VALUES (NULL, :classnumber, :attendancenumber, :id1000, :name, :nameuniv, :faculty, :faculty2, :department, :department2, :examsystem, :commontest, :oneormulti, :passfail, now())';
+$sql = 'INSERT INTO exam_table (id, classnumber, attendancenumber, id1000, name, nameuniv, faculty, faculty2, department, department2, univkind, academicfield, examsystem, commontest, oneormulti, passfail, created_at) 
+                  VALUES (NULL, :classnumber, :attendancenumber, :id1000, :name, :nameuniv, :faculty, :faculty2, :department, :department2, :univkind, :academicfield, :examsystem, :commontest, :oneormulti, :passfail, now())';
 
 $stmt = $pdo->prepare($sql);
 
@@ -78,6 +82,8 @@ $stmt->bindValue(':faculty', $faculty, PDO::PARAM_STR);
 $stmt->bindValue(':faculty2', $faculty2, PDO::PARAM_STR);
 $stmt->bindValue(':department', $department, PDO::PARAM_STR);
 $stmt->bindValue(':department2', $department2, PDO::PARAM_STR);
+$stmt->bindValue(':univkind', $univkind, PDO::PARAM_STR);
+$stmt->bindValue(':academicfield', $academicfield, PDO::PARAM_STR);
 $stmt->bindValue(':examsystem', $examsystem, PDO::PARAM_STR);
 $stmt->bindValue(':commontest', $commontest, PDO::PARAM_STR);
 $stmt->bindValue(':oneormulti', $oneormulti, PDO::PARAM_STR);

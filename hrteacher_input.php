@@ -46,6 +46,40 @@
           </select>
       </div>
       <div class="form-group">
+          <label for="univkind">大学の種類:</label>
+          <select id="univkind" name="univkind">
+              <option value="">選択してください</option>
+              <option value="国立文">国立文</option>
+              <option value="国立理">国立理</option>
+              <option value="私立文">私立文</option>
+              <option value="私立理">私立理</option>
+              <option value="その他">その他</option>
+          </select>
+      </div>  
+      <div class="form-group">
+          <label for="academicfield">学系:</label>
+          <select id="academicfield" name="academicfield">
+              <option value="">選択してください</option>
+              <option value="文・人文">文・人文</option>
+              <option value="外国語">外国語</option>
+              <option value="商・経済・経営">商・経済・経営</option>
+              <option value="法・政治">法・政治</option>
+              <option value="教育・心理">教育・心理</option>              
+              <option value="社会・福祉・家政">社会・福祉・家政</option>
+              <option value="芸術・スポーツ">芸術・スポーツ</option>
+              <option value="国際">国際</option>
+              <option value="共創・ﾘﾍﾞﾗﾙｱｰﾂ・他">共創・ﾘﾍﾞﾗﾙｱｰﾂ・他</option>
+              <option value="理学・工学">理学・工学</option>              
+              <option value="医学">医学</option>
+              <option value="歯学">歯学</option>
+              <option value="薬学">薬学</option>
+              <option value="看護">看護</option>
+              <option value="保健">保健</option>              
+              <option value="獣医">獣医</option>
+              <option value="農・食品">農・食品</option>
+          </select>
+      </div>      
+      <div class="form-group">
           <label for="examsystem">入試方式:</label>
           <select id="examsystem" name="examsystem">
               <option value="">選択してください</option>
