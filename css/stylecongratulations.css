@@ -9,7 +9,7 @@ html::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-image: url('../img/sakura2.jpeg'); 
     background-size: cover; /* 画像が要素全体を覆うように拡大・縮小します */
     background-repeat: no-repeat; /* 画像の繰り返しを無効にします */
@@ -19,7 +19,7 @@ html::before {
 }
 
 header{
-  margin: 10px 0 15px 100px;
+  margin: 10px 0 40px 100px;
 }
 
 #header2{
@@ -27,6 +27,58 @@ header{
 }
 
 
+#university-list-container {
+    height: 100%; /* 親のcong-containerの高さを引き継ぐ */
+    overflow-y: auto; /* コンテンツが溢れたらスクロールバーを表示 */
+    padding-right: 15px; /* スクロールバーのスペースを考慮 */
+    box-sizing: border-box; /* paddingがwidthに影響しないようにする */
+}
+
+
+/* リスト全体をマルチカラムにする */
+.multi-column-list {
+    list-style: none; /* デフォルトのリストスタイルを解除 */
+    padding: 0; /* デフォルトのパディングを解除 */
+    margin: 0; /* デフォルトのマージンを解除 */
+
+    column-count: 1; /* 2カラム表示にする */
+    column-gap: 20px; /* カラム間の隙間 */
+    /* column-fill: balance; カラムの高さを均等にする（コンテンツ量による） */
+    height: 100%; /* 親の#university-list-containerの高さに合わせる */
+}
+
+/* li要素は引き続きFlexboxで中身を揃える */
+.multi-column-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    break-inside: avoid-column; /* li要素がカラムをまたいで分断されるのを防ぐ */
+    margin-bottom: 0.5em; /* 各リストアイテムの下に少し余白 */
+}
+
+.multi-column-list li strong.univ-name {
+    flex-shrink: 0;
+    min-width: 60px; /* 必要に応じて調整 */
+    /* text-align: right; */
+}
+
+.multi-column-list li span.total-count {
+    flex-shrink: 0;
+    min-width: 50px; /* 必要に応じて調整 */
+    text-align: right;
+}
+
+.multi-column-list li span.dept-details {
+    flex-grow: 1;
+}
+
+
+
+#cong-container{
+  width: 90vw;
+  margin: 0 auto;
+  height: 78vh;
+}
 
 
 #inputlink{

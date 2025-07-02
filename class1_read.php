@@ -22,7 +22,7 @@ try {
 
 // SQL作成&実行
 
-$sql = 'SELECT * FROM exam_table WHERE classnumber = 1';
+$sql = 'SELECT * FROM exam_table WHERE classnumber = 1 ORDER BY attendancenumber ASC';
 
 $stmt = $pdo->prepare($sql);
 

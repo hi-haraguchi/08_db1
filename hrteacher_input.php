@@ -158,6 +158,10 @@
       </div>
 
       <a href="congratulations_read.php" target="_blank" id="resultlink">合格実績の画面へ</a>
+      <a href="carrerguide_chart.php" target="_blank" >各種割合について</a>
+      
+
+
 
   </form>
 

@@ -22,7 +22,9 @@ try {
 
 // SQL作成&実行
 
-$sql = "SELECT * FROM exam_table WHERE classnumber NOT IN ('1', '2', '3')";
+$sql = "SELECT * FROM exam_table
+WHERE classnumber NOT IN ('1', '2', '3')
+ORDER BY classnumber DESC, attendancenumber ASC;";
 
 $stmt = $pdo->prepare($sql);
 
