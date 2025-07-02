@@ -1,0 +1,137 @@
+body {
+    font-family: 'Klee One', sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: ''; /* 疑似要素には必須のプロパティです */
+    position: absolute; /* body要素に対して絶対位置に配置します */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/sakura2.jpeg'); 
+    background-size: cover; /* 画像が要素全体を覆うように拡大・縮小します */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効にします */
+    background-position: center center; /* 画像を中央に配置します */
+    opacity: 0.1; /* ここで背景画像のみ10%の透過率を設定します */
+    z-index: -1; /* この疑似要素を他のコンテンツ（文字など）の下に配置します */
+}
+
+header{
+  margin: 10px 0 15px 100px;
+}
+
+#header1{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#header2{
+  font-size: 24px;
+}
+
+
+
+select,input {
+    font-family: 'Klee One', sans-serif; 
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#nameattention{
+  margin-bottom: 15px;
+  margin-left: 140px;
+  font-size: 14px;
+}
+
+
+.form-group {
+    display: flex; /* ラベルと入力フィールドを横並びにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    margin-bottom: 10px; /* 各フォームグループ間の下マージン */
+}
+
+.form-group label {
+    flex-shrink: 0; /* ラベルの縮小を防ぐ */
+    width: 120px; /* ラベルの固定幅 */
+    text-align: right; /* テキストを右揃えにする */
+    margin-right: 10px; /* ラベルと入力フィールドの間のスペース */
+    padding-right: 5px; /* 必要に応じて、ラベルの右側にパディング */
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group select {
+    flex-grow: 0.3; /* 入力フィールドが利用可能なスペースを埋めるように拡張 */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 「氏名」のreadonly入力フィールドに対する調整 */
+#nameInput {
+    background-color: #e9e9e9; /* 読み取り専用であることを視覚的に示す */
+}
+
+/* univinputflex クラスに対する調整 */
+.univinputflex {
+    display: flex;
+    align-items: center;
+    margin-left: 136px;
+    margin-bottom: 10px;
+    width: 38%;
+}
+
+.univinputflex > div:first-child {
+    flex-grow: 1; /* 親の幅いっぱいに広げるようにする */
+} 
+
+.univinputflex input[type="text"] {
+    width: 100%; /* 親divの幅を100%使うようにする */
+    /* ここで固定幅を削除することで、flex-growが有効になります */
+}
+
+.univinputflex select {
+    flex-shrink: 0; 
+    margin-left: 20px; /* inputとselectの間のスペースを調整 */
+}
+
+
+button {
+  margin-top: 10px;
+  margin-left: 180px;
+  width: 80px;
+  height: 30px;
+  font-family: 'Klee One', sans-serif; 
+}
+
+
+
+
+#classlink{
+  margin: 25px 0 20px 180px;
+}
+
+#resultlink{
+  margin-left: 180px;
+}
+
+a {
+  color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
+}
+
+a:active,
+a:hover,
+a:visited
+{
+  color: inherit;        /* 状態が変わっても色を変えない */
+}
+
+
+
+
+

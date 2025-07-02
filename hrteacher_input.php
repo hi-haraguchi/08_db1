@@ -4,46 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(担任用)合否入力フォーム</title>
+  <title>(担任用)受験データフォーム</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
+  <header>
+        <h4 id="header1">～担任の先生入力用～</h4>
+        <h2 id="header2">生徒の受験データ入力フォーム</h2>
+  </header>
+
+
   <form action="student_create.php" method="POST">
-    <fieldset>
-      <legend>(担任用)合否入力フォーム</legend>
-      <a href="student_read.php">一覧画面</a>
-      <div>
-        組: <input type="number" min="1" step="1" name="classnumber">
+      <div class="form-group">
+        <label for="classnumber">組:</label>
+        <input type="number" min="1" step="1" name="classnumber">
       </div>
-      <div>
-        出席番号: <input type="number" min="1" step="1" name="attendancenumber">
+      <div class="form-group">
+        <label for="attendancenumber">出席番号:</label>
+        <input type="number" min="1" step="1" name="attendancenumber">
       </div>
       <div  hidden>
         id1000: <input type="number" min="1" step="1" name="id1000" id="id1000input">
       </div>
-      <div>
-        氏名: <input type="text" name="name" id="nameInput" readonly>
-      </div> 
-      <div>
-        <input type="text" name="nameuniv">大学
-      </div> 
-      <div>
-        <input type="text" name="faculty">
-      </div>                     
       <div class="form-group">
-          <select id="faculty2" name="faculty2">
-              <option value="学部">学部</option>
-              <option value="学群">学群</option>
-          </select>
+        <label for="nameInput">氏名: </label>        
+        <input type="text" name="name" id="nameInput" readonly>
       </div>
-      <div>
-        <input type="text" name="department">
-      </div>                     
-      <div class="form-group">
-          <select id="department2" name="department2">
-              <option value="学科">学科</option>
-              <option value="学類">学類</option>
-          </select>
+      <p id="nameattention">※クラスと出席番号を入力すれば自動で入力されます</p>
+      <div class="univinputflex">
+          <div>
+            <input type="text" name="nameuniv">
+          </div>
+          <div>
+              <select id="nameuniv2" name="nameuniv2">
+                  <option value="大学">大学</option>
+                  <option value="大学校">大学校</option>
+              </select>
+          </div>
+      </div>
+      <div  class="univinputflex">
+          <div>
+            <input type="text" name="faculty">
+          </div>                     
+          <div>
+              <select id="faculty2" name="faculty2">
+                  <option value="学部">学部</option>
+                  <option value="学群">学群</option>
+              </select>
+          </div>
+      </div>
+      <div  class="univinputflex">
+          <div>
+            <input type="text" name="department">
+          </div>                     
+          <div>
+              <select id="department2" name="department2">
+                  <option value="学科">学科</option>
+                  <option value="学類">学類</option>
+              </select>
+          </div>
       </div>
       <div class="form-group">
           <label for="univkind">大学の種類:</label>
@@ -119,7 +145,20 @@
       <div>
         <button>送信</button>
       </div>
-    </fieldset>
+
+
+      <div id="classlink">
+          <p>各クラスの状況</p>
+          <div id="eachclass">
+            <a href="class1_read.php" target="_blank">1組</a>
+            <a href="class2_read.php" target="_blank">2組</a>
+            <a href="class3_read.php" target="_blank">3組</a>
+            <a href="classex_read.php" target="_blank">過年度生</a>            
+          </div>
+      </div>
+
+      <a href="student_read.php" target="_blank" id="resultlink">合格実績の画面へ</a>
+
   </form>
 
 </body>
