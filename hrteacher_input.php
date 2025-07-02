@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(担任用)受験データフォーム</title>
+  <title>(担任用)受験データ入力フォーム</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,7 +139,7 @@
               <option value="">選択してください</option>
               <option value="合格">合格</option>
               <option value="不合格">不合格</option>
-              <option value="なし">なし</option>              
+              <option value="未受験">未受験</option>              
           </select>
       </div>
       <div>
@@ -157,7 +157,7 @@
           </div>
       </div>
 
-      <a href="student_read.php" target="_blank" id="resultlink">合格実績の画面へ</a>
+      <a href="congratulations_read.php" target="_blank" id="resultlink">合格実績の画面へ</a>
 
   </form>
 
