@@ -37,7 +37,7 @@
         <label for="nameInput">氏名: </label>        
         <input type="text" name="name" id="nameInput" readonly>
       </div>
-      <p id="nameattention">※クラスと出席番号を入力すれば自動で入力されます</p>
+      <p id="nameattention">※クラスと出席番号を入力すれば自動で入力されます。（Githubのreadmeに生徒名簿のスクショあります）</p>
       <div class="univinputflex">
           <div>
             <input type="text" name="nameuniv">
@@ -158,10 +158,8 @@
       </div>
 
       <a href="congratulations_read.php" target="_blank" id="resultlink">合格実績の画面へ</a>
-      <a href="carrerguide_chart.php" target="_blank" >各種割合について</a>
-      
-
-
+      <a href="carrerguide_chart.php" target="_blank" id="chartlink">各種割合について</a>
+      <a href="scholarship_read.php" target="_blank" >奨学生について</a>
 
   </form>
 

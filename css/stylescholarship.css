@@ -1,0 +1,88 @@
+html {
+    font-family: 'Klee One', sans-serif;
+    position: relative;
+}
+
+html::before {
+    content: ''; /* 疑似要素には必須のプロパティです */
+    position: absolute; /* body要素に対して絶対位置に配置します */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-image: url('../img/sakura2.jpeg'); 
+    background-size: cover; /* 画像が要素全体を覆うように拡大・縮小します */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効にします */
+    background-position: center center; /* 画像を中央に配置します */
+    opacity: 0.1; /* ここで背景画像のみ10%の透過率を設定します */
+    z-index: -1; /* この疑似要素を他のコンテンツ（文字など）の下に配置します */
+}
+
+header{
+  margin: 10px 0 15px 100px;
+}
+
+#header2{
+  font-size: 24px;
+}
+
+.table-container {
+  height: 60vh; /* ビューポートの高さの90%をコンテナの高さに設定 */
+  width: 90%; /* コンテナの幅を90%に設定 */
+  margin: 0 auto; /* 中央寄せ */
+  overflow-y: auto; /* 縦スクロールを有効にする */
+}
+
+table {
+  width: 100%; /* コンテナの幅に合わせてテーブルの幅を100%に設定 */
+  border-collapse: collapse; /* セルの境界線を結合 */
+  border-spacing: 0; /* セルの間隔をなくす */
+}
+
+th {
+  border-bottom: 3px double #000; /* タイトルの下線を二重線にする */
+  padding: 10px 0; /* 上下のパディングを設定 */
+  width: 200px; /* 列の幅を200pxに設定 */
+  text-align: left; /* テキストを左寄せにする */
+  background-color: #f9f9f9; /* ヘッダーの背景色（スクロール時に固定される場合を考慮） */
+  position: sticky; /* ヘッダーをスクロール時に固定 */
+  top: 0; /* 上部に固定 */
+  z-index: 1; /* 他の要素より手前に表示 */
+}
+
+td {
+  border-bottom: 1px solid #ddd; /* 各項目の横線を薄く入れる */
+  padding: 10px 0; /* 上下のパディングを設定 */
+  width: 200px; /* 列の幅を200pxに設定 */
+  text-align: left; /* テキストを左寄せにする */
+}
+
+/* 各列の間にgapを設定 */
+th + th,
+td + td {
+  padding-left: 20px; /* 左側にgapを設定 */
+}
+
+
+
+#inputlink{
+  display: block;
+  margin-left: 180px;
+  margin-top: 20px;
+}
+
+a {
+  color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
+}
+
+a:active,
+a:hover,
+a:visited
+{
+  color: inherit;        /* 状態が変わっても色を変えない */
+}
+
+
+
+
+

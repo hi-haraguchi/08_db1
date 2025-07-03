@@ -121,6 +121,10 @@ button {
   margin-right: 15px;
 }
 
+#chartlink{
+  margin-right: 15px;
+}
+
 a {
   color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
 }
